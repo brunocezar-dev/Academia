@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: fitlife-postgres
+    environment:
+      POSTGRES_DB: fitlife
+      POSTGRES_USER: fitlife
+      POSTGRES_PASSWORD: fitlife_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - fitlife_data:/var/lib/postgresql/data
+volumes:
+  fitlife_data:
